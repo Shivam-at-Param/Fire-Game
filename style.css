@@ -1,0 +1,44 @@
+#game-container {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#game-screen {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  border: 1px solid black;
+}
+
+#game-info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#game-info p {
+  font-size: 20px;
+  margin: 10px;
+}
+
+#game-info span {
+  font-weight: bold;
+}
+
+.cell {
+  background-color: white;
+  border: 1px solid black;
+  box-sizing: border-box;
+  height: 20%;
+}
+
+.cell.wall {
+  background-color: gray;
+}
+
+.cell.player {
+  background-color: red;
+}
