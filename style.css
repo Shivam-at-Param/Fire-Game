@@ -1,0 +1,108 @@
+#game-container {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#game-screen {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  border: 1px solid black;
+}
+
+#game-info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#game-info p {
+  font-size: 20px;
+  margin: 10px;
+}
+
+#game-info span {
+  font-weight: bold;
+}
+
+.cell {
+  background-color: white;
+  border: 1px solid black;
+  box-sizing: border-box;
+  height: 20%;
+}
+
+.cell.wall {
+  background-color: gray;
+}
+
+.cell.player {
+  background-image: url(/light-fire.png);
+  background-size: 40% 60%; 
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#flame{
+	width:150px;
+	height:150px;
+	background:linear-gradient(-45deg, red, orange);
+	border-radius: 150px 150px 0px 150px;
+	transform:rotate(-135deg);
+	animation:.1s flame infinite;
+	filter:blur(10px);
+	position:relative;
+	box-shadow:17px 20px 90px #700;
+	border:45px solid black;
+	border-left-width:25px;
+	border-top-width:25px;
+}
+	#flame:after,
+	#flame:before{
+		content:'';
+		width:100px;
+		height:100px;
+		display:block;
+		position:absolute;
+		background:linear-gradient(-45deg, red, orange);
+		animation:.2s flame infinite;
+		transform:scale(.8) rotate(20deg);
+		border-radius: 100px 100px 0px 100px;
+		top:20px;
+	}
+	#flame:before{
+		top:0;
+		animation-duration:.09s;
+		transform:scale(.9) rotate(-15deg) translate(10px, 0px);
+	}
+
+/* @keyframes flame{
+  0% {height:150px; width:150px;}
+  50% {height:140px; width:140px;}
+  100% {height:150px; width:150px;}
+} */
+
+@keyframes flame {
+  0% {
+    height: 0.5rem;
+    width: 0.5rem;
+
+  }
+
+  50% {
+    height: 0.3rem;
+    width: 0.3rem;
+  }
+
+  100% {
+    height: 0.5rem;
+    width: 0.5rem;
+  }
+}
+
+.fuel {
+  background-color: teal;
+}
